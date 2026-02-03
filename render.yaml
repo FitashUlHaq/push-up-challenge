@@ -1,0 +1,40 @@
+services:
+  # Backend API (Free tier - 750 hours/month, spins down after 15 min idle)
+  - type: web
+    name: push-up-challenge-backend-3ea7fc
+    runtime: python
+    plan: free
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: cd backend && uvicorn main_api:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.9.16
+      - key: PORT
+        value: 8000
+
+  # Frontend (Free static site)
+  - type: web
+    name: push-up-challenge-frontend-3ea7fc
+    runtime: static
+    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: frontend/build
+    envVars:
+      - key: VITE_API_URL
+        value: https://push-up-challenge-backend-3ea7fc.onrender.com
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+
+  # Agent Service (Free tier - WebSocket-based AI agent)
+  - type: web
+    name: push-up-challenge-agent-3ea7fc
+    runtime: python
+    plan: free
+    buildCommand: pip install besser-agentic-framework[all]
+    startCommand: cd agent && python Agent_Diagram.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: PORT
+        value: 8765
