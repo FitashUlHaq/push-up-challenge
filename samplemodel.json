@@ -1,0 +1,1239 @@
+{
+  "id": "project_1769780236509_dyjf9vja7",
+  "type": "Project",
+  "name": "sampleModel",
+  "description": "New project",
+  "owner": "User",
+  "createdAt": "2026-01-30T13:37:16.509Z",
+  "currentDiagramType": "ClassDiagram",
+  "diagrams": {
+    "ClassDiagram": {
+      "id": "f9f830fa-eb5e-4473-99b8-eb43312348ac",
+      "title": "Class Diagram",
+      "model": {
+        "version": "3.0.0",
+        "type": "ClassDiagram",
+        "size": {
+          "width": 1260,
+          "height": 1240
+        },
+        "interactive": {
+          "elements": {},
+          "relationships": {}
+        },
+        "elements": {
+          "class_7j5wyj9tr_ml6dlkdc": {
+            "id": "class_7j5wyj9tr_ml6dlkdc",
+            "name": "User",
+            "type": "Class",
+            "owner": null,
+            "bounds": {
+              "x": -570,
+              "y": -320,
+              "width": 220,
+              "height": 90
+            },
+            "attributes": [
+              "attr_pr4mh6qqv_ml6dlkdc",
+              "attr_honookvum_ml6dlkdc"
+            ],
+            "methods": []
+          },
+          "attr_pr4mh6qqv_ml6dlkdc": {
+            "id": "attr_pr4mh6qqv_ml6dlkdc",
+            "name": "name",
+            "type": "ClassAttribute",
+            "owner": "class_7j5wyj9tr_ml6dlkdc",
+            "bounds": {
+              "x": -569.5,
+              "y": -279.5,
+              "width": 219,
+              "height": 25
+            },
+            "code": "",
+            "visibility": "public",
+            "attributeType": "str",
+            "implementationType": "none",
+            "stateMachineId": "",
+            "quantumCircuitId": ""
+          },
+          "attr_honookvum_ml6dlkdc": {
+            "id": "attr_honookvum_ml6dlkdc",
+            "name": "email",
+            "type": "ClassAttribute",
+            "owner": "class_7j5wyj9tr_ml6dlkdc",
+            "bounds": {
+              "x": -569.5,
+              "y": -254.5,
+              "width": 219,
+              "height": 25
+            },
+            "code": "",
+            "visibility": "public",
+            "attributeType": "str",
+            "implementationType": "none",
+            "stateMachineId": "",
+            "quantumCircuitId": ""
+          },
+          "class_wxq8lnlcb_ml6dlkdc": {
+            "id": "class_wxq8lnlcb_ml6dlkdc",
+            "name": "Record",
+            "type": "Class",
+            "owner": null,
+            "bounds": {
+              "x": -580,
+              "y": -600,
+              "width": 250,
+              "height": 120
+            },
+            "attributes": [
+              "attr_1h2ns8hw6_ml6dlkdc",
+              "attr_bfntl80xb_ml6dlkdc"
+            ],
+            "methods": [
+              "35212df6-f9fb-426f-a355-0bed45f25ab2"
+            ]
+          },
+          "attr_1h2ns8hw6_ml6dlkdc": {
+            "id": "attr_1h2ns8hw6_ml6dlkdc",
+            "name": "date",
+            "type": "ClassAttribute",
+            "owner": "class_wxq8lnlcb_ml6dlkdc",
+            "bounds": {
+              "x": -579.5,
+              "y": -559.5,
+              "width": 249,
+              "height": 25
+            },
+            "code": "",
+            "visibility": "public",
+            "attributeType": "date",
+            "implementationType": "none",
+            "stateMachineId": "",
+            "quantumCircuitId": ""
+          },
+          "attr_bfntl80xb_ml6dlkdc": {
+            "id": "attr_bfntl80xb_ml6dlkdc",
+            "name": "numberOfPushups",
+            "type": "ClassAttribute",
+            "owner": "class_wxq8lnlcb_ml6dlkdc",
+            "bounds": {
+              "x": -579.5,
+              "y": -534.5,
+              "width": 249,
+              "height": 25
+            },
+            "code": "",
+            "visibility": "public",
+            "attributeType": "int",
+            "implementationType": "none",
+            "stateMachineId": "",
+            "quantumCircuitId": ""
+          },
+          "35212df6-f9fb-426f-a355-0bed45f25ab2": {
+            "id": "35212df6-f9fb-426f-a355-0bed45f25ab2",
+            "name": "+ update_record(record)",
+            "type": "ClassMethod",
+            "owner": "class_wxq8lnlcb_ml6dlkdc",
+            "bounds": {
+              "x": -579.5,
+              "y": -509.5,
+              "width": 249,
+              "height": 30
+            },
+            "code": "def update_record(self, record):\n    \"\"\"\n    Decrease the available stock by the given quantity.\n\n    :param qty: Number of items to remove from stock\n    :raises ValueError: If qty is negative or exceeds available stock\n    \"\"\"\n    if record <= 0:\n        raise ValueError(\"Quantity must be a positive integer\")\n\n\n    self.numberOfPushups += qty\n\n",
+            "visibility": "public",
+            "attributeType": "str",
+            "implementationType": "code",
+            "stateMachineId": "",
+            "quantumCircuitId": ""
+          },
+          "95511252-88fb-459a-8bd4-3f43619b31cb": {
+            "id": "95511252-88fb-459a-8bd4-3f43619b31cb",
+            "name": "",
+            "type": "ClassOCLConstraint",
+            "owner": null,
+            "bounds": {
+              "x": -180,
+              "y": -600,
+              "width": 160,
+              "height": 100
+            },
+            "constraint": "context Record inv inv1: self.numberOfPushups>=0"
+          }
+        },
+        "relationships": {
+          "rel_8zz7ex8np_ml6dlkdc": {
+            "id": "rel_8zz7ex8np_ml6dlkdc",
+            "name": "hasRecords",
+            "type": "ClassBidirectional",
+            "owner": null,
+            "bounds": {
+              "x": -610,
+              "y": -550,
+              "width": 373.3833312988281,
+              "height": 313.6666660308838
+            },
+            "path": [
+              {
+                "x": 40,
+                "y": 275
+              },
+              {
+                "x": 0,
+                "y": 275
+              },
+              {
+                "x": 0,
+                "y": 190
+              },
+              {
+                "x": 320,
+                "y": 190
+              },
+              {
+                "x": 320,
+                "y": 10
+              },
+              {
+                "x": 280,
+                "y": 10
+              }
+            ],
+            "source": {
+              "direction": "Left",
+              "element": "class_7j5wyj9tr_ml6dlkdc",
+              "multiplicity": "1",
+              "role": "",
+              "bounds": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              }
+            },
+            "target": {
+              "direction": "Right",
+              "element": "class_wxq8lnlcb_ml6dlkdc",
+              "multiplicity": "*",
+              "role": "hasRecords",
+              "bounds": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              }
+            },
+            "isManuallyLayouted": false
+          },
+          "fa6840d1-5168-45b7-9916-dfa66678b9a4": {
+            "id": "fa6840d1-5168-45b7-9916-dfa66678b9a4",
+            "name": "",
+            "type": "ClassOCLLink",
+            "owner": null,
+            "bounds": {
+              "x": -330,
+              "y": -560,
+              "width": 150,
+              "height": 31
+            },
+            "path": [
+              {
+                "x": 150,
+                "y": 10
+              },
+              {
+                "x": 0,
+                "y": 10
+              }
+            ],
+            "source": {
+              "direction": "Upleft",
+              "element": "95511252-88fb-459a-8bd4-3f43619b31cb",
+              "multiplicity": "",
+              "role": ""
+            },
+            "target": {
+              "direction": "Upright",
+              "element": "class_wxq8lnlcb_ml6dlkdc",
+              "multiplicity": "",
+              "role": ""
+            },
+            "isManuallyLayouted": false
+          }
+        },
+        "assessments": {}
+      },
+      "lastUpdate": "2026-02-03T09:44:02.975Z"
+    },
+    "ObjectDiagram": {
+      "id": "e40813de-2f51-4a6f-b7d5-fb0c298108af",
+      "title": "Object Diagram",
+      "model": {
+        "version": "3.0.0",
+        "type": "ObjectDiagram",
+        "size": {
+          "width": 1400,
+          "height": 740
+        },
+        "elements": {},
+        "relationships": {},
+        "interactive": {
+          "elements": {},
+          "relationships": {}
+        },
+        "assessments": {}
+      },
+      "lastUpdate": "2026-01-30T09:30:00.633084+00:00"
+    },
+    "AgentDiagram": {
+      "id": "f525f6c1-2d5c-402c-bd49-2fb52bec1f48",
+      "title": "Agent Diagram",
+      "model": {
+        "version": "3.0.0",
+        "type": "AgentDiagram",
+        "size": {
+          "width": 1400,
+          "height": 740
+        },
+        "elements": {},
+        "relationships": {},
+        "interactive": {
+          "elements": {},
+          "relationships": {}
+        },
+        "assessments": {}
+      },
+      "lastUpdate": "2026-01-30T09:30:00.633093+00:00"
+    },
+    "StateMachineDiagram": {
+      "id": "e543bfb7-1d54-4d7a-87cd-485d4a80763f",
+      "title": "StateMachine Diagram",
+      "model": {
+        "version": "3.0.0",
+        "type": "StateMachineDiagram",
+        "size": {
+          "width": 1400,
+          "height": 740
+        },
+        "elements": {},
+        "relationships": {},
+        "interactive": {
+          "elements": {},
+          "relationships": {}
+        },
+        "assessments": {}
+      },
+      "lastUpdate": "2026-01-30T09:30:00.633102+00:00"
+    },
+    "QuantumCircuitDiagram": {
+      "id": "5aa72611-e743-4b5f-b829-672c7bcce7c7",
+      "title": "Quantum Circuit",
+      "model": {
+        "cols": [
+          [
+            "H",
+            "H",
+            1,
+            1
+          ],
+          [
+            "Measure",
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            "Measure",
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            "X^t",
+            1
+          ],
+          [
+            1,
+            1,
+            "__FUNC__f",
+            1
+          ]
+        ],
+        "gates": [],
+        "gateMetadata": {
+          "4_2": {
+            "nestedCircuit": {
+              "cols": [
+                [
+                  "H",
+                  1
+                ],
+                [
+                  1,
+                  "Y"
+                ],
+                [
+                  1,
+                  1
+                ],
+                [
+                  1,
+                  "Measure"
+                ]
+              ],
+              "gates": [],
+              "gateMetadata": {},
+              "initialStates": [
+                "|0\u27e9",
+                "|0\u27e9"
+              ],
+              "classicalBitCount": 0
+            },
+            "label": "f",
+            "type": "FUNCTION",
+            "isFunctionGate": true,
+            "height": 2,
+            "backgroundColor": "#F0E8FF"
+          }
+        },
+        "initialStates": [
+          "|0\u27e9",
+          "|0\u27e9",
+          "|0\u27e9",
+          "|0\u27e9"
+        ],
+        "classicalBitCount": 0,
+        "version": "1.0.0"
+      },
+      "lastUpdate": "2026-02-03T09:43:40.943Z"
+    },
+    "GUINoCodeDiagram": {
+      "id": "10fa9e44-7f15-42ff-b52a-2ffa99c57c96",
+      "title": "GUI Diagram",
+      "model": {
+        "pages": [
+          {
+            "name": "User",
+            "frames": [
+              {
+                "component": {
+                  "type": "wrapper",
+                  "stylable": [
+                    "background",
+                    "background-color",
+                    "background-image",
+                    "background-repeat",
+                    "background-attachment",
+                    "background-position",
+                    "background-size"
+                  ],
+                  "components": [
+                    {
+                      "attributes": {
+                        "id": "io65o"
+                      },
+                      "components": [
+                        {
+                          "tagName": "nav",
+                          "attributes": {
+                            "id": "iut7p"
+                          },
+                          "components": [
+                            {
+                              "tagName": "h2",
+                              "type": "text",
+                              "attributes": {
+                                "id": "ijupm"
+                              },
+                              "components": [
+                                {
+                                  "type": "textnode",
+                                  "content": "BESSER"
+                                }
+                              ]
+                            },
+                            {
+                              "attributes": {
+                                "id": "iycj2"
+                              },
+                              "components": [
+                                {
+                                  "type": "link",
+                                  "attributes": {
+                                    "href": "/user",
+                                    "id": "ixxq2"
+                                  },
+                                  "components": [
+                                    {
+                                      "type": "textnode",
+                                      "content": "User"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "link",
+                                  "attributes": {
+                                    "href": "/record",
+                                    "id": "ihfhj"
+                                  },
+                                  "components": [
+                                    {
+                                      "type": "textnode",
+                                      "content": "Record"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "attributes": {
+                                "id": "idtwh"
+                              },
+                              "components": [
+                                {
+                                  "type": "textnode",
+                                  "content": "\u00a9 2025 BESSER. All rights reserved."
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "tagName": "main",
+                          "attributes": {
+                            "id": "i5kim"
+                          },
+                          "components": [
+                            {
+                              "tagName": "h1",
+                              "type": "text",
+                              "attributes": {
+                                "id": "i2nv8"
+                              },
+                              "components": [
+                                {
+                                  "type": "textnode",
+                                  "content": "User"
+                                }
+                              ]
+                            },
+                            {
+                              "tagName": "p",
+                              "type": "text",
+                              "attributes": {
+                                "id": "itgpt"
+                              },
+                              "components": [
+                                {
+                                  "type": "textnode",
+                                  "content": "Manage User data"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "table",
+                              "style": "",
+                              "attributes": {
+                                "chart-color": "#2c3e50",
+                                "chart-title": "User List",
+                                "data-source": "class_7j5wyj9tr_ml6dlkdc",
+                                "show-header": "true",
+                                "striped-rows": "false",
+                                "show-pagination": "true",
+                                "rows-per-page": "5",
+                                "action-buttons": "true",
+                                "columns": [
+                                  {
+                                    "field": "name",
+                                    "label": "Name",
+                                    "columnType": "field",
+                                    "_expanded": false
+                                  },
+                                  {
+                                    "field": "email",
+                                    "label": "Email",
+                                    "columnType": "field",
+                                    "_expanded": false
+                                  },
+                                  {
+                                    "field": "hasRecords",
+                                    "label": "HasRecords",
+                                    "columnType": "lookup",
+                                    "lookupEntity": "class_wxq8lnlcb_ml6dlkdc",
+                                    "lookupField": "date",
+                                    "_expanded": false
+                                  }
+                                ],
+                                "id": "table-user-0",
+                                "filter": ""
+                              },
+                              "chart-title": "User List",
+                              "data-source": "class_7j5wyj9tr_ml6dlkdc",
+                              "show-header": "true",
+                              "striped-rows": "false",
+                              "show-pagination": "true",
+                              "action-buttons": "true",
+                              "rows-per-page": "5",
+                              "filter": "",
+                              "columns": [
+                                {
+                                  "field": "name",
+                                  "label": "Name",
+                                  "columnType": "field",
+                                  "_expanded": false
+                                },
+                                {
+                                  "field": "email",
+                                  "label": "Email",
+                                  "columnType": "field",
+                                  "_expanded": false
+                                },
+                                {
+                                  "field": "hasRecords",
+                                  "label": "HasRecords",
+                                  "columnType": "lookup",
+                                  "lookupEntity": "class_wxq8lnlcb_ml6dlkdc",
+                                  "lookupField": "date",
+                                  "_expanded": false
+                                }
+                              ],
+                              "components": [
+                                {
+                                  "type": "tbody",
+                                  "draggable": [
+                                    "table"
+                                  ],
+                                  "droppable": [
+                                    "tr"
+                                  ],
+                                  "components": [
+                                    {
+                                      "type": "row",
+                                      "draggable": [
+                                        "thead",
+                                        "tbody",
+                                        "tfoot"
+                                      ],
+                                      "droppable": [
+                                        "th",
+                                        "td"
+                                      ],
+                                      "classes": [
+                                        "row"
+                                      ],
+                                      "components": [
+                                        {
+                                          "type": "cell",
+                                          "draggable": [
+                                            "tr"
+                                          ],
+                                          "classes": [
+                                            "cell"
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ],
+                              "chart-color": "#2c3e50"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "head": {
+                    "type": "head"
+                  },
+                  "docEl": {
+                    "tagName": "html"
+                  }
+                },
+                "id": "i0gJ1nSYeny1j01C"
+              }
+            ],
+            "id": "page-user-0",
+            "route_path": "/user"
+          },
+          {
+            "name": "Record",
+            "frames": [
+              {
+                "component": {
+                  "type": "wrapper",
+                  "stylable": [
+                    "background",
+                    "background-color",
+                    "background-image",
+                    "background-repeat",
+                    "background-attachment",
+                    "background-position",
+                    "background-size"
+                  ],
+                  "components": [
+                    {
+                      "attributes": {
+                        "id": "izss2"
+                      },
+                      "components": [
+                        {
+                          "tagName": "nav",
+                          "attributes": {
+                            "id": "il3s9"
+                          },
+                          "components": [
+                            {
+                              "tagName": "h2",
+                              "type": "text",
+                              "attributes": {
+                                "id": "ijqzl"
+                              },
+                              "components": [
+                                {
+                                  "type": "textnode",
+                                  "content": "BESSER"
+                                }
+                              ]
+                            },
+                            {
+                              "attributes": {
+                                "id": "i5z5r"
+                              },
+                              "components": [
+                                {
+                                  "type": "link",
+                                  "attributes": {
+                                    "href": "/user",
+                                    "id": "ic93d"
+                                  },
+                                  "components": [
+                                    {
+                                      "type": "textnode",
+                                      "content": "User"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "link",
+                                  "attributes": {
+                                    "href": "/record",
+                                    "id": "i5p6e"
+                                  },
+                                  "components": [
+                                    {
+                                      "type": "textnode",
+                                      "content": "Record"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "attributes": {
+                                "id": "ieyfn"
+                              },
+                              "components": [
+                                {
+                                  "type": "textnode",
+                                  "content": "\u00a9 2025 BESSER. All rights reserved."
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "tagName": "main",
+                          "attributes": {
+                            "id": "i2oak"
+                          },
+                          "components": [
+                            {
+                              "tagName": "h1",
+                              "type": "text",
+                              "attributes": {
+                                "id": "it2x1"
+                              },
+                              "components": [
+                                {
+                                  "type": "textnode",
+                                  "content": "Record"
+                                }
+                              ]
+                            },
+                            {
+                              "tagName": "p",
+                              "type": "text",
+                              "attributes": {
+                                "id": "irosq"
+                              },
+                              "components": [
+                                {
+                                  "type": "textnode",
+                                  "content": "Manage Record data"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "table",
+                              "style": "",
+                              "attributes": {
+                                "chart-color": "#2c3e50",
+                                "chart-title": "Record List",
+                                "data-source": "class_wxq8lnlcb_ml6dlkdc",
+                                "show-header": "true",
+                                "striped-rows": "false",
+                                "show-pagination": "true",
+                                "rows-per-page": "5",
+                                "action-buttons": "true",
+                                "columns": [
+                                  {
+                                    "field": "date",
+                                    "label": "Date",
+                                    "columnType": "field",
+                                    "_expanded": false
+                                  },
+                                  {
+                                    "field": "numberOfPushups",
+                                    "label": "NumberOfPushups",
+                                    "columnType": "field",
+                                    "_expanded": false
+                                  },
+                                  {
+                                    "field": "class_7j5wyj9tr_ml6dlkdc",
+                                    "label": "Class 7j5wyj9tr Ml6dlkdc",
+                                    "columnType": "lookup",
+                                    "lookupEntity": "class_7j5wyj9tr_ml6dlkdc",
+                                    "lookupField": "name",
+                                    "_expanded": false
+                                  },
+                                  {
+                                    "field": "95511252-88fb-459a-8bd4-3f43619b31cb",
+                                    "label": "95511252-88fb-459a-8bd4-3f43619b31cb",
+                                    "columnType": "lookup",
+                                    "lookupEntity": "95511252-88fb-459a-8bd4-3f43619b31cb",
+                                    "lookupField": "",
+                                    "_expanded": false
+                                  }
+                                ],
+                                "id": "table-record-1",
+                                "filter": ""
+                              },
+                              "chart-title": "Record List",
+                              "data-source": "class_wxq8lnlcb_ml6dlkdc",
+                              "show-header": "true",
+                              "striped-rows": "false",
+                              "show-pagination": "true",
+                              "action-buttons": "true",
+                              "rows-per-page": "5",
+                              "filter": "",
+                              "columns": [
+                                {
+                                  "field": "date",
+                                  "label": "Date",
+                                  "columnType": "field",
+                                  "_expanded": false
+                                },
+                                {
+                                  "field": "numberOfPushups",
+                                  "label": "NumberOfPushups",
+                                  "columnType": "field",
+                                  "_expanded": false
+                                },
+                                {
+                                  "field": "class_7j5wyj9tr_ml6dlkdc",
+                                  "label": "Class 7j5wyj9tr Ml6dlkdc",
+                                  "columnType": "lookup",
+                                  "lookupEntity": "class_7j5wyj9tr_ml6dlkdc",
+                                  "lookupField": "name",
+                                  "_expanded": false
+                                },
+                                {
+                                  "field": "95511252-88fb-459a-8bd4-3f43619b31cb",
+                                  "label": "95511252-88fb-459a-8bd4-3f43619b31cb",
+                                  "columnType": "lookup",
+                                  "lookupEntity": "95511252-88fb-459a-8bd4-3f43619b31cb",
+                                  "lookupField": "",
+                                  "_expanded": false
+                                }
+                              ],
+                              "components": [
+                                {
+                                  "type": "tbody",
+                                  "draggable": [
+                                    "table"
+                                  ],
+                                  "droppable": [
+                                    "tr"
+                                  ],
+                                  "components": [
+                                    {
+                                      "type": "row",
+                                      "draggable": [
+                                        "thead",
+                                        "tbody",
+                                        "tfoot"
+                                      ],
+                                      "droppable": [
+                                        "th",
+                                        "td"
+                                      ],
+                                      "classes": [
+                                        "row"
+                                      ],
+                                      "components": [
+                                        {
+                                          "type": "cell",
+                                          "draggable": [
+                                            "tr"
+                                          ],
+                                          "classes": [
+                                            "cell"
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ],
+                              "chart-color": "#2c3e50"
+                            },
+                            {
+                              "attributes": {
+                                "id": "ibvn1"
+                              },
+                              "components": [
+                                {
+                                  "type": "action-button",
+                                  "style": "",
+                                  "classes": [
+                                    "action-button-component"
+                                  ],
+                                  "attributes": {
+                                    "type": "button",
+                                    "data-button-label": "+ update_record",
+                                    "data-action-type": "run-method",
+                                    "data-method-class": "class_wxq8lnlcb_ml6dlkdc",
+                                    "data-method": "35212df6-f9fb-426f-a355-0bed45f25ab2",
+                                    "data-instance-source": "table-record-1",
+                                    "id": "iu4sx"
+                                  },
+                                  "button-label": "+ update_record",
+                                  "action-type": "run-method",
+                                  "method-class": "class_wxq8lnlcb_ml6dlkdc",
+                                  "method": "35212df6-f9fb-426f-a355-0bed45f25ab2",
+                                  "instance-source": "table-record-1",
+                                  "components": [
+                                    {
+                                      "type": "textnode",
+                                      "content": "+ update_record"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "head": {
+                    "type": "head"
+                  },
+                  "docEl": {
+                    "tagName": "html"
+                  }
+                },
+                "id": "YhDBOAINL7QRRMRN"
+              }
+            ],
+            "id": "page-record-1",
+            "route_path": "/record"
+          }
+        ],
+        "styles": [
+          {
+            "selectors": [
+              "#ijupm"
+            ],
+            "style": {
+              "margin-top": "0",
+              "font-size": "24px",
+              "margin-bottom": "30px",
+              "font-weight": "bold"
+            }
+          },
+          {
+            "selectors": [
+              "#ixxq2"
+            ],
+            "style": {
+              "color": "white",
+              "text-decoration": "none",
+              "padding": "10px 15px",
+              "display": "block",
+              "background": "rgba(255,255,255,0.2)",
+              "border-radius": "4px",
+              "margin-bottom": "5px"
+            }
+          },
+          {
+            "selectors": [
+              "#ihfhj"
+            ],
+            "style": {
+              "color": "white",
+              "text-decoration": "none",
+              "padding": "10px 15px",
+              "display": "block",
+              "background": "transparent",
+              "border-radius": "4px",
+              "margin-bottom": "5px"
+            }
+          },
+          {
+            "selectors": [
+              "#iycj2"
+            ],
+            "style": {
+              "display": "flex",
+              "flex-direction": "column",
+              "flex": "1"
+            }
+          },
+          {
+            "selectors": [
+              "#idtwh"
+            ],
+            "style": {
+              "margin-top": "auto",
+              "padding-top": "20px",
+              "border-top": "1px solid rgba(255,255,255,0.2)",
+              "font-size": "11px",
+              "opacity": "0.8",
+              "text-align": "center"
+            }
+          },
+          {
+            "selectors": [
+              "#iut7p"
+            ],
+            "style": {
+              "width": "250px",
+              "background": "linear-gradient(135deg, #4b3c82 0%, #5a3d91 100%)",
+              "color": "white",
+              "padding": "20px",
+              "overflow-y": "auto",
+              "display": "flex",
+              "flex-direction": "column"
+            }
+          },
+          {
+            "selectors": [
+              "#i2nv8"
+            ],
+            "style": {
+              "margin-top": "0",
+              "color": "#333",
+              "font-size": "32px",
+              "margin-bottom": "10px"
+            }
+          },
+          {
+            "selectors": [
+              "#itgpt"
+            ],
+            "style": {
+              "color": "#666",
+              "margin-bottom": "30px"
+            }
+          },
+          {
+            "selectors": [
+              "#i5kim"
+            ],
+            "style": {
+              "flex": "1",
+              "padding": "40px",
+              "overflow-y": "auto",
+              "background": "#f5f5f5"
+            }
+          },
+          {
+            "selectors": [
+              "#io65o"
+            ],
+            "style": {
+              "display": "flex",
+              "height": "100vh",
+              "font-family": "Arial, sans-serif"
+            }
+          },
+          {
+            "selectors": [
+              "#ijqzl"
+            ],
+            "style": {
+              "margin-top": "0",
+              "font-size": "24px",
+              "margin-bottom": "30px",
+              "font-weight": "bold"
+            }
+          },
+          {
+            "selectors": [
+              "#ic93d"
+            ],
+            "style": {
+              "color": "white",
+              "text-decoration": "none",
+              "padding": "10px 15px",
+              "display": "block",
+              "background": "transparent",
+              "border-radius": "4px",
+              "margin-bottom": "5px"
+            }
+          },
+          {
+            "selectors": [
+              "#i5p6e"
+            ],
+            "style": {
+              "color": "white",
+              "text-decoration": "none",
+              "padding": "10px 15px",
+              "display": "block",
+              "background": "rgba(255,255,255,0.2)",
+              "border-radius": "4px",
+              "margin-bottom": "5px"
+            }
+          },
+          {
+            "selectors": [
+              "#i5z5r"
+            ],
+            "style": {
+              "display": "flex",
+              "flex-direction": "column",
+              "flex": "1"
+            }
+          },
+          {
+            "selectors": [
+              "#ieyfn"
+            ],
+            "style": {
+              "margin-top": "auto",
+              "padding-top": "20px",
+              "border-top": "1px solid rgba(255,255,255,0.2)",
+              "font-size": "11px",
+              "opacity": "0.8",
+              "text-align": "center"
+            }
+          },
+          {
+            "selectors": [
+              "#il3s9"
+            ],
+            "style": {
+              "width": "250px",
+              "background": "linear-gradient(135deg, #4b3c82 0%, #5a3d91 100%)",
+              "color": "white",
+              "padding": "20px",
+              "overflow-y": "auto",
+              "display": "flex",
+              "flex-direction": "column"
+            }
+          },
+          {
+            "selectors": [
+              "#it2x1"
+            ],
+            "style": {
+              "margin-top": "0",
+              "color": "#333",
+              "font-size": "32px",
+              "margin-bottom": "10px"
+            }
+          },
+          {
+            "selectors": [
+              "#irosq"
+            ],
+            "style": {
+              "color": "#666",
+              "margin-bottom": "30px"
+            }
+          },
+          {
+            "selectors": [
+              "#iu4sx"
+            ],
+            "style": {
+              "display": "inline-flex",
+              "align-items": "center",
+              "padding": "6px 14px",
+              "background": "linear-gradient(90deg, #2563eb 0%, #1e40af 100%)",
+              "color": "#fff",
+              "text-decoration": "none",
+              "border-radius": "4px",
+              "font-size": "13px",
+              "font-weight": "600",
+              "letter-spacing": "0.01em",
+              "cursor": "pointer",
+              "border": "none",
+              "box-shadow": "0 1px 4px rgba(37,99,235,0.10)",
+              "transition": "background 0.2s"
+            }
+          },
+          {
+            "selectors": [
+              "#ibvn1"
+            ],
+            "style": {
+              "margin-top": "20px",
+              "display": "flex",
+              "gap": "10px",
+              "flex-wrap": "wrap"
+            }
+          },
+          {
+            "selectors": [
+              "#i2oak"
+            ],
+            "style": {
+              "flex": "1",
+              "padding": "40px",
+              "overflow-y": "auto",
+              "background": "#f5f5f5"
+            }
+          },
+          {
+            "selectors": [
+              "#izss2"
+            ],
+            "style": {
+              "display": "flex",
+              "height": "100vh",
+              "font-family": "Arial, sans-serif"
+            }
+          }
+        ],
+        "assets": [],
+        "symbols": [],
+        "version": "0.21.13"
+      },
+      "lastUpdate": "2026-02-03T09:43:47.783Z"
+    }
+  },
+  "settings": {
+    "defaultDiagramType": "ClassDiagram",
+    "autoSave": true,
+    "collaborationEnabled": false
+  }
+}
